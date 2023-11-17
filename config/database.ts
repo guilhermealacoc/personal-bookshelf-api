@@ -42,14 +42,14 @@ const databaseConfig: DatabaseConfig = {
         password: Env.get('PG_PASSWORD', ''),
         database: Env.get('PG_DB_NAME'),
       },
+      searchPath: [Env.get('PG_SCHEMA')],
       migrations: {
         naturalSort: true,
       },
       healthCheck: false,
       debug: false,
     },
-
-  }
+  },
 }
 
 export default databaseConfig
