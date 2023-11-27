@@ -5,6 +5,18 @@ export default class Publisher extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
+  @column()
+  public name: string
+
+  @column()
+  public description: string
+
+  @column()
+  public logo: string
+
+  @column()
+  public website: string
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 
